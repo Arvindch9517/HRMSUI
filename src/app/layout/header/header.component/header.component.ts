@@ -10,13 +10,14 @@ export class HeaderComponent {
 
   @Output()
   toggleSidebar = new EventEmitter<void>();
-
+  
   toggleMenu() {
     this.toggleSidebar.emit();
   }
    showProfileMenu = false;
-  userName = 'Admin';
-
+  //userName = 'Admin';
+  user = JSON.parse(localStorage.getItem('user') || '{}');
+  userName = this.user.name;
   toggleProfileMenu(): void {
     this.showProfileMenu = !this.showProfileMenu;
   }

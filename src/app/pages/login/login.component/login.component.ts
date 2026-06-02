@@ -36,7 +36,7 @@ export class LoginComponent {
         next:(res)=>{
 
           this.auth.saveToken(res);
-
+          localStorage.setItem('user', JSON.stringify(res.user));
           this.router.navigate(['/dashboard']);
         }
       });
