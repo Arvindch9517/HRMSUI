@@ -1,0 +1,51 @@
+.sidebar{
+  width:250px;
+  height:100vh;
+  background:#1e293b;
+  color:white;
+  position:fixed;
+  left:0;
+  top:0;
+  transition:0.3s;
+  overflow:hidden;
+}
+
+.sidebar.collapsed{
+  width:80px;
+}
+
+.logo{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  font-weight:bold;
+  border-bottom:1px solid #334155;
+}
+
+ul{
+  list-style:none;
+  padding:20px 0;
+}
+
+li{
+  display:flex;
+  align-items:center;
+  padding:15px 20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+li:hover{
+  background:#334155;
+}
+
+.icon{
+  font-size:20px;
+  min-width:40px;
+}
+
+.title{
+  font-size:16px;
+}

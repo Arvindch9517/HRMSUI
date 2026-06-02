@@ -1,0 +1,46 @@
+<!--<div class="layout">
+
+    <app-sidebar
+      [collapsed]="isSidebarCollapsed">
+    </app-sidebar>
+
+    <div class="main">
+
+        <app-header
+        (toggleSidebar)="toggleSidebar()">
+        </app-header>
+
+        <div class="page-content">
+
+            <router-outlet>
+            </router-outlet>
+
+        </div>
+
+    </div>
+
+</div>
+-->
+<div class="layout">
+
+  <!-- Sidebar -->
+  <app-sidebar
+    [collapsed]="isSidebarCollapsed">
+  </app-sidebar>
+
+  <!-- Main Content -->
+  <div class="main-section"
+       [class.expanded]="isSidebarCollapsed">
+
+    <!-- Header -->
+    <app-header
+      (toggleSidebar)="toggleSidebar()">
+    </app-header>
+
+    <!-- Content -->
+            <router-outlet>
+            </router-outlet>
+
+  </div>
+
+</div>

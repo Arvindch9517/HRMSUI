@@ -1,0 +1,58 @@
+<div class="sidebar"
+     [class.collapsed]="collapsed">
+
+  <div class="logo">
+    <span *ngIf="!collapsed">HRMS</span>
+    <span *ngIf="collapsed">H</span>
+  </div>
+
+  <ul>
+
+    <li *ngFor="let menu of menus">
+     <div *ngIf="!menu.children" [routerLink]="menu.route" routerLinkActive="active">
+
+    <span class="icon">
+        {{menu.icon}}
+      </span>
+
+        <span *ngIf="!collapsed">
+        {{menu.title}}
+        </span>
+
+    </div>
+
+      <div
+*ngIf="menu.children">
+
+<div
+class="parent"
+(click)="toggle(menu)">
+
+ <span class="icon">
+        {{menu.icon}}
+      </span>
+
+<span *ngIf="!collapsed">
+{{menu.title}}
+</span>
+
+</div>
+
+<ul *ngIf="menu.expanded">
+
+<li
+*ngFor="let child of menu.children">
+
+<a
+[routerLink]="child.route"
+routerLinkActive="active">
+
+{{child.title}}
+
+</a>
+
+</li>
+
+</ul>
+
+</div>

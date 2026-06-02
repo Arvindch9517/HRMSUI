@@ -1,0 +1,47 @@
+.employee-card {
+  margin: 10px;
+  height: 135px;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #9a4bd7, #b056e5);
+  width: 310px;
+}
+
+.icon-section {
+  background: rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-icon {
+  font-size: 50px;
+}
+
+.content-section {
+  padding: 15px;
+  color: #fff;
+}
+
+.content-section h4 {
+  font-size: 13px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.content-section h2 {
+  padding-right: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.progress {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 0;
+}
+
+.progress-bar {
+  background: #ffffff;
+}
