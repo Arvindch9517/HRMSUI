@@ -15,7 +15,7 @@
         {{menu.icon}}
       </span>
 
-        <span *ngIf="!collapsed">
+        <span *ngIf="!collapsed" style="font-size: 13px;">
         {{menu.title}}
         </span>
 
@@ -32,7 +32,7 @@ class="parent"
         {{menu.icon}}
       </span>
 
-<span *ngIf="!collapsed">
+<span *ngIf="!collapsed" style="font-size: 13px;">
 {{menu.title}}
 </span>
 
@@ -45,7 +45,7 @@ class="parent"
 
 <a
 [routerLink]="child.route"
-routerLinkActive="active">
+routerLinkActive="active" class="submenu">
 
 {{child.title}}
 
