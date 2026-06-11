@@ -7,10 +7,10 @@ import {
 
 import { Injectable } from '@angular/core';
 import {
-  Observable,
   catchError,
   throwError,
-  switchMap
+  switchMap,
+  Observable
 } from 'rxjs';
 
 import { AuthService } from '../services/auth.service';

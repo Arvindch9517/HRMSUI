@@ -2,19 +2,41 @@
 
   <div class="left-section">
 
-    <button class="btn btn-primary my-btn" (click)="toggleMenu()">
+    <button class="btn btn-outline-info btn-sm" (click)="toggleMenu()">
       ☰
     </button>
 
-    <h2>HRMS Dashboard</h2>
+    <h5>HRMS Dashboard</h5>
 
   </div>
 
-<div class="profile-container" (click)="toggleProfileMenu()">
-  <img src="./assets/user.png" alt="" class="profile-img">
-  <span>{{ userName }}</span>
-  <i class="bi bi-chevron-down"></i>
-</div>
+
+ <div class="dropdown" (click)="toggleProfileMenu()">
+
+      <button class="btn btn-light dropdown-toggle"
+              data-bs-toggle="dropdown">
+
+        <i class="bi bi-person-circle"></i>
+        {{userName}}
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+
+        <li>
+          <a class="dropdown-item">
+            Profile
+          </a>
+        </li>
+
+        <li>
+          <a class="dropdown-item text-danger">
+            Logout
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
 @if(showProfileMenu) {
   <div class="profile-menu">
     <a (click)="logout()">
