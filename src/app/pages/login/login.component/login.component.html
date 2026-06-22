@@ -1,16 +1,26 @@
-<div class="login-container">
+<div class="login-wrapper">
 
-    <div class="left-panel">
-        <img src="assets/login.svg" alt="">
+  <!-- LEFT SIDE (Branding) -->
+  <div class="left-side">
+    <div class="content">
+      <h2>Techniche HRMS Portal</h2>
+      <p>Manage Employees, Attendance, Payroll & Reports in one place.</p>
+
+      <div class="features">
+        <div>✔ Secure Login</div>
+        <div>✔ Role Based Access</div>
+        <div>✔ Real-time Dashboard</div>
+      </div>
     </div>
+  </div>
 
-    <div class="right-panel">
+  <!-- RIGHT SIDE (Login Form) -->
+  <div class="right-side">
+    <div class="login-card">
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Please sign in to continue</p>
 
-        <div class="login-card">
-
-            <h2>HRMS Login</h2>
-
-            <form (ngSubmit)="login()">
+       <form (ngSubmit)="login()">
 
                 <div class="form-group">
                     <label>UserName</label>
@@ -35,9 +45,7 @@
                 </button>
 
             </form>
-
-        </div>
-
     </div>
+  </div>
 
 </div>

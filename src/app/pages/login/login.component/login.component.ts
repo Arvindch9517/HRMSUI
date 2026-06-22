@@ -37,6 +37,7 @@ export class LoginComponent {
 
           this.auth.saveToken(res);
           localStorage.setItem('user', JSON.stringify(res.user));
+          localStorage.setItem('token', res.token);
           this.router.navigate(['/dashboard']);
         }
       });

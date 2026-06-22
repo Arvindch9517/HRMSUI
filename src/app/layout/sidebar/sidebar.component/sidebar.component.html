@@ -1,58 +1,51 @@
-<div class="sidebar"
-     [class.collapsed]="collapsed">
+<div class="sidebar" [class.collapsed]="collapsed">
 
   <div class="logo">
-    <span *ngIf="!collapsed">HRMS</span>
-    <span *ngIf="collapsed">H</span>
+    <span *ngIf="!collapsed">Techniche</span>
+    <span *ngIf="collapsed">T</span>
   </div>
 
   <ul>
 
-    <li *ngFor="let menu of menus">
-     <div *ngIf="!menu.children" [routerLink]="menu.route" routerLinkActive="active">
+    <li *ngFor="let menu of menus;let i = index">
+      <div *ngIf="!menu.children" routerLinkActive="active">
 
-    <span class="icon">
-        {{menu.icon}}
-      </span>
-
-        <span *ngIf="!collapsed" style="font-size: 13px;">
-        {{menu.title}}
+        <span class="icon">
+          {{menu.icon}}
         </span>
 
-    </div>
+        <span *ngIf="!collapsed" style="font-size: 13px;">
+          {{menu.title}}
+        </span>
 
-      <div
-*ngIf="menu.children">
+      </div>
+      <div *ngIf="menu.children">
 
-<div
-class="parent"
-(click)="toggle(menu)">
+        <div class="parent" (click)="toggle(menu)">
+          
+          <span class="{{menu.menuicon}}">
+            {{menu.icon}}
+          </span>
 
- <span class="icon">
-        {{menu.icon}}
-      </span>
+          <span *ngIf="!collapsed" style="font-size: 13px;">
+            {{menu.title}}
+          </span>
 
-<span *ngIf="!collapsed" style="font-size: 13px;">
-{{menu.title}}
-</span>
+        </div>
 
-</div>
+        <ul *ngIf="menu.expanded">
 
-<ul *ngIf="menu.expanded">
+          <li *ngFor="let child of menu.children">
+            <span  style="font-size: x-small; margin: 4px;"> >>  </span>
+            <!--<a [routerLink]="child.route" routerLinkActive="active" class="submenu">-->
+            <a [routerLink]="child.route" routerLinkActive="active" class="submenu">
 
-<li
-*ngFor="let child of menu.children">
+              {{child.title}}
 
-<a
-[routerLink]="child.route"
-routerLinkActive="active" class="submenu">
+            </a>
 
-{{child.title}}
+          </li>
 
-</a>
+        </ul>
 
-</li>
-
-</ul>
-
-</div>
+      </div>

@@ -6,6 +6,8 @@
   overflow: hidden;
   background: linear-gradient(90deg, #9a4bd7, #b056e5);
   width: 310px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .icon-section {
@@ -45,3 +47,50 @@
 .progress-bar {
   background: #ffffff;
 }
+ .info-box-content {
+        padding: 15px 5px;
+        margin-left: 70px;
+    }
+    .info-box-text {
+        text-transform: uppercase;
+       
+    }
+       .card-1 {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18), 0 10px 10px rgba(0, 0, 0, 0.35);
+    }
+     .info-box .progress {
+        background: rgba(0,0,0,0.2);
+        margin: 5px -4px;
+        height: 2px;
+    }
+
+        .info-box .progress, .info-box .progress .progress-bar {
+            border-radius: 0;
+        }
+        .info-box .progress .progress-bar {
+        background: #fff;
+    }
+     .info-box .progress .progress-bar {
+        background: #fff;
+    }
+    .bg-orange{
+      background-color: #bc09ed !important;
+      color: white;
+      
+    }
+     .info-box-icon {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 2px;
+        display: block;
+        float: left;
+        height: 90px;
+        width: 70px;
+        text-align: center;
+        font-size: 45px;
+        line-height: 90px;
+        background: rgba(0,0,0,0.2);
+    }
+
+        

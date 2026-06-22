@@ -1,1 +1,75 @@
-<p>employee.component works!</p>
+<div style="border:solid; border-color: rgb(206, 198, 198);border-width: 1px; margin: 10px;">
+    <div class="alert alert-secondary formtitle" >
+Add Employee
+</div>
+<div class="row formMargin">
+  <div class="col-md-12">
+    <div class="col-md-5 mb-3">
+    <label class="form-label">Company Name</label>
+    <input type="text" class="form-control">
+  </div>
+  </div>
+   
+  <div class="col-md-3 mb-5">
+    <label class="form-label">First Name</label>
+    <input type="text" class="form-control">
+  </div>
+
+  <div class="col-md-3 mb-5">
+    <label class="form-label">Last Name</label>
+    <input type="text" class="form-control">
+  </div>
+</div>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <button
+      class="nav-link"
+      [class.active]="activeTab === 'home'"
+      (click)="activeTab = 'home'" >
+      Home
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button
+      class="nav-link"
+      [class.active]="activeTab === 'profile'"
+      (click)="activeTab = 'profile'">
+      Profile
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button
+      class="nav-link"
+      [class.active]="activeTab === 'contact'"
+      (click)="activeTab = 'contact'">
+      Contact
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content mt-3" style="margin: 20px;">
+    @if (activeTab === 'home'){
+    <div>
+    <h4>Home Tab</h4>
+    <p>Home content goes here.</p>
+  </div>
+
+    }
+  
+@if(activeTab === 'profile'){
+  <div>
+    <h4>Profile Tab</h4>
+    <p>Profile content goes here.</p>
+  </div>
+}
+@if(activeTab === 'contact'){
+  <div >
+    <h4>Contact Tab</h4>
+    <p>Contact content goes here.</p>
+  </div>
+
+}
+</div>
+</div>

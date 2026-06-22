@@ -7,7 +7,10 @@
   left:0;
   top:0;
   transition:0.3s;
-  overflow:hidden;
+  overflow-y:auto;
+}
+.sidebar::-webkit-scrollbar {
+  width: 8px;
 }
 
 .sidebar.collapsed{
@@ -22,19 +25,21 @@
   font-size:24px;
   font-weight:bold;
   border-bottom:1px solid #334155;
+  user-select: none;
 }
 
 ul{
   list-style:none;
-  padding:15px 0;
+  padding:10px 0;
 }
 
 li{
   display:flex;
   align-items:center;
-  padding:10px 15px;
+  padding:8px 10px;
   cursor:pointer;
   transition:0.3s;
+  user-select: none;
 }
 
 li:hover{
@@ -42,12 +47,12 @@ li:hover{
 }
 
 .icon{
-  font-size:20px;
-  min-width:40px;
+  font-size:15px;
+  min-width:30px;
 }
 
 .title{
-  font-size:16px;
+  font-size:10px;
 }
 .submenu{
   font-size: 13px;

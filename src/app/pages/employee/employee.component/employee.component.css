@@ -1,0 +1,17 @@
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--bs-nav-tabs-link-active-color);
+    background-color: #ffc107;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+.formtitle{
+    font-weight: bold; 
+    user-select: none;
+    border-radius: 0;
+    height:40px;
+    padding: 8px 4px 4px 15px;
+}
+.formMargin{
+    font-family:  Calibri;
+    font-size: 14px;;
+    margin: 5px;
+}
